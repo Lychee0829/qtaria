@@ -1,70 +1,84 @@
-# Qtaria 项目构建与运行指南
+# A guide to building and running the Qtaria project
 
-本指南将帮助您在 Arch Linux 系统上构建和运行 Qtaria 项目。
+This guide is a tip for building and running a Qtaria project on an Arch Linux system. **Note: Only available for Arch Linux related distributions**
 
-## 📦 依赖安装
+## Thanks
 
-在首次构建项目之前，请确保已安装所有必要的依赖项。您可以使用以下命令安装所需的依赖：
+[Qtaria original project](https://github.com/manox14/qtaria)
+
+The original project contributors are as follows:
+
+1.  [arunpyasi](https://github.com/openarun)
+2.  [born-jre](https://github.com/born-jre)
+3.  [Kool Arpan](https://github.com/kooolarpan)
+4.  [Pradip Dhakal](https://github.com/pradip001)
+5.  [nirooj56](https://github.com/nirooj56)
+6.  [prashant10651me](https://github.com/prashant10651me)
+
+## 📦 Dependent installation
+
+Before you build your project for the first time, make sure you have all the necessary dependencies installed. You can install the required dependencies with the following command:
 
 ```bash
-# 安装依赖
+# install dependencies
 ./install_deps.sh
 ```
 
-该脚本会自动完成以下操作：
-- 安装 Qt5 基础库（包括 Widgets、Network、WebSockets 等）
-- 安装 OpenSSL 1.1 兼容版本
-- 安装 aria2 下载管理器库
-- 创建 `libssl.so.1.0.0` 和 `libcrypto.so.1.0.0` 的符号链接以兼容旧版依赖
+The script automatically does the following:
 
-> ⚠️ 注意：此脚本需要管理员权限来安装系统级依赖。
+*   Install the Qt5 library base (including Widgets, Network, WebSockets, etc.)
+*   Install the OpenSSL 1.1 compatible version
+*   Install the ARIA2 Download Manager library
+*   Create symlinks for `libssl.so.1.0.0` and `libcrypto.so.1.0.0` to be compatible with legacy dependencies
 
-## 🛠️ 构建项目
+> ⚠️ Note: This script requires administrator privileges to install system-level dependencies.
 
-要构建项目，请运行以下命令：
+## 🛠️ Build the project
+
+To build your project, run the following command:
 
 ```bash
-# 构建项目
+# build project
 ./build.sh
 ```
 
-该脚本会执行以下操作：
-- 清理旧的构建文件（如果存在）
-- 使用 `qmake` 生成 Makefile
-- 编译整个项目
+The script does the following:
 
-如果构建成功，终端将提示您可以通过 `./qtaria` 运行程序。
+*   Clean up old build files (if they exist)
+*   Use `qmake` to generate a Makefile
+*   Compile the entire project
 
-## ▶️ 运行程序
+If the build is successful, the terminal will prompt you to run the program via `./qtaria`.
 
-构建完成后，您可以使用以下命令运行程序：
+## ▶️ Run the program
+
+Once the build is complete, you can run the program with the following command:
 
 ```bash
-# 运行程序
+# run program
 ./run.sh
 ```
 
-该脚本会检查可执行文件是否存在，并启动应用程序。
+The script checks for the presence of the executable and launches the application.
 
-## 🔧 卸载依赖
+## 🔧 Uninstall dependencies
 
-如果您希望清理系统并卸载项目所依赖的软件包，可以运行：
+If you wish to clean up your system and uninstall the packages that your project depends on, you can run:
 
 ```bash
-# 卸载依赖
+# uninstall dependencies
 ./uninstall_deps.sh
 ```
 
-该脚本会：
-- 删除之前创建的 `libssl.so.1.0.0` 和 `libcrypto.so.1.0.0` 符号链接
-- 卸载 Qt5、OpenSSL 1.1 和 aria2 软件包
+The script will:
 
-> ⚠️ 注意：这将删除系统中相关的开发库，请确保这些库没有被其他项目使用。
+*   Delete the `libssl.so.1.0.0` and `libcrypto.so.1.0.0` symlinks that you created earlier
+*   Uninstall Qt5, OpenSSL 1.1, and aria2 packages
 
-## 📝 注意事项
+> ⚠️ Note: This will remove the relevant development libraries from the system, please make sure they are not being used by other projects.
 
-- 所有脚本都应在项目根目录 `/home/lychee0829/qtaria/src` 中运行。
-- 如果您更改了项目路径，请手动修改脚本中的路径以匹配您的实际环境。
-- 如果您遇到任何问题，可以尝试查看编译输出或运行 `make clean` 后重新构建。
+## 📝 Precautions
 
-祝您开发顺利！
+*   All scripts should be run in the project root directory `/home/lychee0829/qtaria/src`.
+*   If you change the project path, manually modify the path in the script to match your actual environment.
+*   If you run into any issues, you can try reviewing the compiled output or running `make clean` and rebuilding.
