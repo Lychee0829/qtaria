@@ -1,5 +1,7 @@
 # A guide to building and running the Qtaria project
 
+[简体中文](https://github.com/Lychee0829/qtaria/blob/master/cnreadme.md)
+
 This guide is a tip for building and running a Qtaria project on an Arch Linux system. **Note: Only available for Arch Linux related distributions**
 
 ## Thanks
