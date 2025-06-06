@@ -1,6 +1,6 @@
 #ifndef OBJECTHOLDER_H
 #define OBJECTHOLDER_H
-#include<QWidget>
+#include<QtWidgets/QWidget>
 #include<QLabel>
 #include<QHBoxLayout>
 #include<QPushButton>

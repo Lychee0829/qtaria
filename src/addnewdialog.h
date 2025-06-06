@@ -1,7 +1,7 @@
 #ifndef ADDNEWDIALOG_H
 #define ADDNEWDIALOG_H
 
-#include <QDialog>
+#include <QtWidgets/QDialog>
 #include "mainwindow.h"
 class MainWindow;
 namespace Ui {

@@ -4,9 +4,7 @@
 #
 #-------------------------------------------------
 #CONFIG += static
-QT       += core gui
-
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets websockets
+QT       += core gui widgets
 
 TARGET = qtaria
 TEMPLATE = app
@@ -21,7 +19,6 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # In order to do so, uncomment the following line.
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
-
 
 SOURCES += main.cpp\
         mainwindow.cpp \
@@ -39,7 +36,7 @@ FORMS    += mainwindow.ui \
 
 RESOURCES += \
     icon-pack.qrc
-LIBS += -L/usr/lib -laria2
+LIBS += -L/usr/lib -laria2 -lssl -lcrypto
 QMAKE_CXXFLAGS += -std=c++1y
 
 unix:!macx: LIBS += -L$$PWD/lib/ -laria2
