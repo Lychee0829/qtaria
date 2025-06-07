@@ -1,8 +1,7 @@
 #!/bin/bash
 # Qtaria Run Script
 
-# 进入项目目录
-cd /home/lychee0829/qtaria/src || { echo "无法进入项目目录"; exit 1; }
+
 
 # 检查可执行文件是否存在
 if [ ! -f "qtaria" ]; then

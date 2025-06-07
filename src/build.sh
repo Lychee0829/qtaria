@@ -1,8 +1,7 @@
 #!/bin/bash
 # Qtaria Build Script
 
-# 进入项目目录
-cd /home/lychee0829/qtaria/src || { echo "无法进入项目目录"; exit 1; }
+
 
 # 清理旧的构建文件
 make clean 2>/dev/null || true
