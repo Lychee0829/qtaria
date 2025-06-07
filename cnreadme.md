@@ -1,7 +1,7 @@
 # Qtaria 项目构建与运行指南
 
 本指南是在 Arch Linux 系统上构建和运行 Qtaria 项目的提示。
-**注意：仅适用于Arch Linux相关发行版**
+**注意：构建脚本仅适用于Arch Linux相关发行版**
 ## 致谢
 
 [Qtaria原项目](https://github.com/manox14/qtaria)
